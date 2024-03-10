@@ -151,10 +151,6 @@ form input[type="submit"]{
   background: #5372F0;
   cursor: pointer;
   border-bottom: 2px solid rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-  background: #2c52ed;
 }
 
 .form .title::before{
@@ -247,9 +243,7 @@ form input[type="submit"]:hover{
   background-color: #4070f4;
   cursor: pointer;
 }
-.button input:hover{
-  background-color: #265df2;
-}
+
 .form .login-signup{
   margin-top: 30px;
   text-align: center;
@@ -299,8 +293,4 @@ table.design thead th:first-child {
 table.design tfoot td {
   
   font-size: 6px;
-}
-
-table.design tbody :hover td{
-  background-color: #bfbfbf;
 }

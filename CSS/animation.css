@@ -1,3 +1,11 @@
 table.design tbody :hover td{
     background-color: #bfbfbf;
   }
+
+form input[type="submit"]:hover{
+  background: #2ced6c;
+}
+
+.button input:hover{
+  background-color: #2ced6c;
+}
