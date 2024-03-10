@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <body>  
-        <section>
-            <h1><strong>User Registration</strong></h1>
-            <legend>User name:</legend>
-            <input type="text" name="username" placeholder="Enter your user name here" style="width:22%"required>
-            <legend>E-mail:</legend>
-            <input type="text" name="email"placeholder="Enter your user mail here" style="width:27%"required> 
-            <legend>Password:</legend>
-            <input type="text" name="password" placeholder="*********************"required>
-            <legend>Confirm password:</legend>
-            <input type="text" name="confirmpassword" placeholder="*********************"required>
-            <br>
-            <button type="register">Register</button>
-        </section>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+          
+</head>
+    <body> 
+      <div class="wrapper">
+       
+        <div class="form signup">
+            <header>Registration</header>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your name" required>
+                    <i class="uil uil-user icon"></i>
+                </div>
+                
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your email" required>
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="password" placeholder="Create a password" required>
+                    <i class="uil uil-lock icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="password" placeholder="Confirm a password" required>
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="input-field button">
+                    <input type="button" value="Signup">
+                </div>
+            </form>
+            <div class="login-signup">
+                <span class="text">Already a member?
+                    <a href="Pages1.html" class="text login-link">Login Now</a>
+                </span>
+            </div>
+        </div>
+</div>
     </body>
 </html>
