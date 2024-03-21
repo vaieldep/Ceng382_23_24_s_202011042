@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\deniz\Desktop\Ceng382\Ceng382_23_24_s_202011042\woop
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/deniz/Desktop/Ceng382/Ceng382_23_24_s_202011042/woop/Pages/bannerofwar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYmFubmVyb2Z3YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/deniz/Desktop/Ceng382/Ceng382_23_24_s_202011042/woop/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
