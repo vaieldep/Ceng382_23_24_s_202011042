@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UQ+UX+aKrgyXYV0hR+3oZ6pjoNdIKddkLvPt+2evwc0=",
+  "Hash": "KoP+LMbW+QoRJVg4LK7KDPD+T85lacXq+Q1gmqwOrNY=",
   "Source": "woop",
   "BasePath": "_content/woop",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\woop.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\css\\app_style.css",
+      "SourceId": "woop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\",
+      "BasePath": "_content/woop",
+      "RelativePath": "css/app_style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\app_style.css"
     },
     {
       "Identity": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\css\\bootstrap.min.css",
@@ -110,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\js\\app_func.js",
+      "SourceId": "woop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\",
+      "BasePath": "_content/woop",
+      "RelativePath": "js/app_func.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\app_func.js"
     },
     {
       "Identity": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\js\\bootstrap.bundle.min.js",

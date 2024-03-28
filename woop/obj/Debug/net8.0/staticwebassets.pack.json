@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\woop.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\css\\app_style.css",
+      "PackagePath": "staticwebassets\\css\\app_style.css"
+    },
+    {
       "Id": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\js\\app_func.js",
+      "PackagePath": "staticwebassets\\js\\app_func.js"
     },
     {
       "Id": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\woop\\wwwroot\\js\\bootstrap.bundle.min.js",

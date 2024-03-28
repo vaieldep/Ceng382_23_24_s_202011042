@@ -3,6 +3,19 @@
 @{
 }
 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of Two Numbers App</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="~/css/app_style.css">
+     
+  </head>
+
+  
 <main>
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
@@ -113,4 +126,48 @@
         </tbody>
       </table>
     </div>
+
+
+
+
+
+
+  <script src= "~/js/app.func.js" ></script>
+
+
+
+
+   <button type="submit" class="hide-button" onclick="show_hide();">Click for addition form</button> <br><br>
+  
+  <div id="sakla">
+    <h2>Addition Form</h2><br>
+    <form>
+
+      <label for="txtNum1">Number 1:</label><br>
+      <input type="number" id="txtNum1" value="" placeholder="0"/><br><br>
+
+      <label for="txtNum2">Number 2</label><br>
+      <input type="number" id="txtNum2" value="" placeholder="0"/><br><br>
+
+      
+      <input type="button" class="calculate-button" value="add" onclick="add()"/>
+      <input type="button" class="calculate-button" value="reset" onclick="reset()"/><br><br>
+
+      <div id="saklan">
+        <label for="txtSum">Sum:</label><br>
+        <input type = "text" id="txtSum" class ="result-Box"  value="" disabled/><br><br>
+      </div>
+    </form>
+
+    
+  </div>
+
+
+  <script src= "~/js/app_func.js" ></script>
+
+
+
+
   </main>
+
+

@@ -1,0 +1,49 @@
+.calculate-button{
+  background-color: lightgreen;
+  color: white;
+  border-radius: 5%;
+  box-shadow: inset 0 0 0 0 rgb(53, 211, 255);
+  transition: ease-in-out 0.9s;
+  outline: none;
+  height: 40px;
+  width: 190px;
+}
+.calculate-button:hover{
+box-shadow:  inset 400px 0 0 0 #2ced6c;
+cursor: pointer;
+color: black;
+}
+
+.hide-button{
+  background-color: lightgreen;
+  color:white;
+  border-radius: 5%;
+  box-shadow: inset 0 0 0 0 rgb(53, 211, 255);
+  transition: ease-out 0.03s;
+ 
+  outline: none;
+  height: 40px;
+  width: 190px;
+}
+.hide-button:hover{
+  box-shadow: inset 400px 0 0 0 #2ced6c;
+  cursor: pointer;
+  color: black;
+}
+
+.result-Box{
+  height: 40px;
+  width: 190px;
+  background-color:lightblue;
+  border-radius: 5%;
+  display: center;
+  line-height: 100px;
+  text-align: center;
+}
+#sakla {
+  display: none; 
+}
+
+#saklan {
+  display: none; 
+}
