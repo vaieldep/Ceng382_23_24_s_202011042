@@ -1,0 +1,632 @@
+[
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-27T15:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T10:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-23T16:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-26T13:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T16:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-28T11:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-26T12:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-25T15:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-25T09:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-25T12:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-27T10:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-26T09:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T13:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-29T09:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T09:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-25T10:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-27T16:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-23T16:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-24T09:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-25T12:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-23T12:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T13:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-23T11:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-28T16:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-26T14:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T11:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-23T09:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-29T14:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T12:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-29T10:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T15:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T09:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-26T14:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-23T16:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-27T12:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-23T14:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-23T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-24T13:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-23T15:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-28T15:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-27T13:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-26T14:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-27T14:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-24T12:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-25T10:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-23T11:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-25T14:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T12:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-28T16:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T13:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T12:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-23T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-27T13:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-25T16:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-27T12:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-23T11:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-29T13:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T16:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T11:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-25T16:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T11:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-28T09:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T12:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T15:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-23T09:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-29T12:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-25T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-23T12:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-29T16:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T14:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-26T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T09:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-29T16:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T14:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T16:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T10:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-24T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T13:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T11:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-24T16:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T12:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-26T10:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-28T11:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-25T14:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-26T15:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-23T13:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-29T15:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-23T09:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-25T11:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-28T10:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-27T09:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-28T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T13:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-27T15:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-24T15:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-27T10:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-25T09:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-26T10:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-28T14:00:00+03:00",
+    "ReservedBy": "Semih"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-26T16:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-24T16:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-26T09:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-27T09:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-24T12:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-29T14:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-26T16:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T10:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-28T16:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-27T16:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T15:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-24T14:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-27T09:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-28T13:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-27T11:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-26T13:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-26T12:00:00+03:00",
+    "ReservedBy": "Arda"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-25T11:00:00+03:00",
+    "ReservedBy": "Kaan"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-29T15:00:00+03:00",
+    "ReservedBy": "Bartu"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-29T15:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-25T11:00:00+03:00",
+    "ReservedBy": "Emre"
+  },
+  {
+    "RoomId": "103",
+    "ReservationTime": "2024-05-23T11:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-25T12:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "104",
+    "ReservationTime": "2024-05-25T10:00:00+03:00",
+    "ReservedBy": "Celal"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-24T12:00:00+03:00",
+    "ReservedBy": "Deniz"
+  },
+  {
+    "RoomId": "102",
+    "ReservationTime": "2024-05-24T10:00:00+03:00",
+    "ReservedBy": "Berke"
+  },
+  {
+    "RoomId": "101",
+    "ReservationTime": "2024-05-27T16:00:00+03:00",
+    "ReservedBy": "Celal"
+  }
+]

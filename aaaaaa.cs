@@ -65,6 +65,7 @@ namespace ReservationSystem
         private Dictionary<(string, int, DateTime), Reservation> _reservations;
         public Dictionary<string, Room> _rooms;
         private List<LogData> _logData;
+        public string reservedByRand;
         public string userName;
         private List<RoomData> _roomDataList;
         private string SaveRooms_filePath = @"C:\Users\deniz\Desktop\Ceng382\Ceng382_23_24_s_202011042\Data.json";
@@ -138,67 +139,113 @@ namespace ReservationSystem
         }
 
         public void RandomlyFillReservations(int reservationCount)
+{
+    Random rand = new Random();
+
+    for (int i = 0; i < reservationCount; i++)
+    {
+        string roomId = _rooms.Keys.ElementAt(rand.Next(_rooms.Count));
+        int dayOfWeek = rand.Next(0, 5); // Only weekdays
+        int hour = rand.Next(9, 17);
+        string reservedByRand = messages[rand.Next(messages.Length)]; // Assign a random name here
+        DateTime reservationTime = DateTime.Today.AddDays(dayOfWeek).AddHours(hour);
+        (string, int, DateTime) key = (roomId, dayOfWeek, reservationTime);
+        if (!_reservations.ContainsKey(key))
         {
-            Random rand = new Random();
+            Reservation reservation = new Reservation(roomId, reservationTime, reservedByRand);
+            _reservations[key] = reservation;
 
-            for (int i = 0; i < reservationCount; i++)
-            {
-                string roomId = _rooms.Keys.ElementAt(rand.Next(_rooms.Count));
-                int dayOfWeek = rand.Next(0, 6); // Only weekdays
-                int hour = rand.Next(9, 17);
-                string reservedBy = messages[rand.Next(messages.Length)];
-                DateTime reservationTime = DateTime.Today.AddDays(dayOfWeek).AddHours(hour);
-                (string, int, DateTime) key = (roomId, dayOfWeek, reservationTime);
-                if (!_reservations.ContainsKey(key))
-                {
-                    Reservation reservation = new Reservation(roomId, reservationTime, reservedBy);
-                    _reservations.Add(key, reservation);
-
-                    UpdateRoomSchedule(roomId, dayOfWeek, reservationTime);
-                }
-            }
-
-            SaveRoomsToJson();
-            SaveReservationsToJson();
+            UpdateRoomSchedule(roomId, dayOfWeek, reservationTime); // Pass the name here
         }
+    }
 
-        public void UpdateRoomSchedule(string roomId, int dayOfWeek, DateTime reservationTime)
+    SaveRoomsToJson();
+    SaveReservationsToJson();
+}
+
+
+public void UpdateRoomScheduleForRandom(string roomId, int dayOfWeek, DateTime reservationTime, string reservedByRand)
+{
+    var roomData = _roomDataList.FirstOrDefault(r => r.RoomId == roomId);
+
+    if (roomData != null)
+    {
+        if (reservationTime.Hour >= 9 && reservationTime.Hour < 17)
         {
-            var roomData = _roomDataList.FirstOrDefault(r => r.RoomId == roomId);
-
-            if (roomData != null)
+            if (dayOfWeek >= 0 && dayOfWeek <= 6)
             {
-                if (reservationTime.Hour >= 9 && reservationTime.Hour < 17)
+                int index = dayOfWeek * 9 + (reservationTime.Hour - 9);
+                if (index >= 0 && index < roomData.WeeklySchedule.Count)
                 {
-                    if (dayOfWeek >= 0 && dayOfWeek <= 6)
-                    {
-                        int index = dayOfWeek * 9 + (reservationTime.Hour - 9);
-                        if (index >= 0 && index < roomData.WeeklySchedule.Count)
-                        {
-                            string reservationInfo = $"{reservationTime.Hour:00}-{reservationTime.Hour + 1:00} {userName}";
-                            roomData.WeeklySchedule[index] = reservationInfo;
-                            Console.WriteLine($"Reservation added for room {roomId} on {reservationTime}.");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Error: Invalid day of week or reservation time.");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error: Invalid day of week.");
-                    }
+                    string reservationInfo = $"{reservationTime.Hour:00}-{reservationTime.Hour + 1:00} {reservedByRand}";
+                    roomData.WeeklySchedule[index] = reservationInfo;
+                    Console.WriteLine($"Reservation added for room {roomId} on {reservationTime}.");
                 }
                 else
                 {
-                    Console.WriteLine("Error: Invalid reservation time.");
+                    Console.WriteLine("Error: Invalid day of week or reservation time.");
                 }
             }
             else
             {
-                Console.WriteLine("Error: Room not found.");
+                Console.WriteLine("Error: Invalid day of week.");
             }
         }
+        else
+        {
+            Console.WriteLine("Error: Invalid reservation time.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Error: Room not found.");
+    }
+}
+
+
+        public void UpdateRoomSchedule(string roomId, int dayOfWeek, DateTime reservationTime)
+{
+    if (!_rooms.ContainsKey(roomId))
+    {
+        Console.WriteLine("Error: Room not found.");
+        return;
+    }
+
+    if (reservationTime.Hour >= 9 && reservationTime.Hour < 17)
+    {
+        if (dayOfWeek >= 0 && dayOfWeek <= 6)
+        {
+            int index = dayOfWeek * 9 + (reservationTime.Hour - 9);
+            if (index >= 0 && index < _roomDataList.Count)
+            {
+                string reservationInfo = $"{reservationTime.Hour:00}-{reservationTime.Hour + 1:00} {userName}";
+                RoomData roomData = new RoomData
+                {
+                    RoomId = roomId,
+                    ReservationTime = reservationTime,
+                    ReservedBy = reservedByRand // or userName, depending on where you're calling this method
+                };
+
+_roomDataList[index] = roomData;
+
+                Console.WriteLine($"Reservation added for room {roomId} on {reservationTime}.");
+            }
+            else
+            {
+                Console.WriteLine("Error: Invalid day of week or reservation time.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error: Invalid day of week.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Error: Invalid reservation time.");
+    }
+}
+
 
         public bool CheckAdminPassword(string password)
         {

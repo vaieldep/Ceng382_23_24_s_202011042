@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
@@ -63,8 +63,22 @@ namespace ReservationSystem
     public class ReservationHandler
     {
         private Dictionary<(string, int, DateTime), Reservation> _reservations;
+        private Reservation? GetReservation(string roomId, int dayOfWeek, DateTime reservationTime)
+        {
+            (string, int, DateTime) key = (roomId, dayOfWeek, reservationTime);
+
+            if (_reservations.ContainsKey(key))
+            {
+                return _reservations[key];
+            }
+            else
+            {
+                return null;
+            }
+        }
         public Dictionary<string, Room> _rooms;
         private List<LogData> _logData;
+        public string Random_reservedBy;
         public string userName;
         private List<RoomData> _roomDataList;
         private string SaveRooms_filePath = @"C:\Users\deniz\Desktop\Ceng382\Ceng382_23_24_s_202011042\Data.json";
@@ -97,13 +111,15 @@ namespace ReservationSystem
             try
             {
                 string jsonData = File.ReadAllText(SaveRooms_filePath);
-                RoomsData roomsData = JsonConvert.DeserializeObject<RoomsData>(jsonData);
-
-                foreach (var roomData in roomsData.Rooms)
+                RoomsData? roomsData = JsonConvert.DeserializeObject<RoomsData>(jsonData);
+                if (roomsData != null)
                 {
+                    foreach (var roomData in roomsData.Rooms)
+                    {
                     _roomDataList.Add(roomData);
-                }
+                    }
 
+                }
                 Console.WriteLine("Rooms data loaded successfully.");
             }
             catch (Exception ex)
@@ -144,17 +160,17 @@ namespace ReservationSystem
             for (int i = 0; i < reservationCount; i++)
             {
                 string roomId = _rooms.Keys.ElementAt(rand.Next(_rooms.Count));
-                int dayOfWeek = rand.Next(0, 6); // Only weekdays
+                int dayOfWeek = rand.Next(0, 7); // Only weekdays
                 int hour = rand.Next(9, 17);
-                string reservedBy = messages[rand.Next(messages.Length)];
+                string Random_reservedBy = messages[rand.Next(messages.Length)];
                 DateTime reservationTime = DateTime.Today.AddDays(dayOfWeek).AddHours(hour);
                 (string, int, DateTime) key = (roomId, dayOfWeek, reservationTime);
                 if (!_reservations.ContainsKey(key))
                 {
-                    Reservation reservation = new Reservation(roomId, reservationTime, reservedBy);
+                    Reservation reservation = new Reservation(roomId, reservationTime, Random_reservedBy);
                     _reservations.Add(key, reservation);
 
-                    UpdateRoomSchedule(roomId, dayOfWeek, reservationTime);
+                    UpdateRoomSchedule_For_Random(roomId, dayOfWeek, reservationTime);
                 }
             }
 
@@ -162,6 +178,45 @@ namespace ReservationSystem
             SaveReservationsToJson();
         }
 
+
+        public void UpdateRoomSchedule_For_Random(string roomId, int dayOfWeek, DateTime reservationTime)
+        {
+            var roomData = _roomDataList.FirstOrDefault(r => r.RoomId == roomId);
+
+            if (roomData != null)
+            {
+                if (reservationTime.Hour >= 9 && reservationTime.Hour < 17)
+                {
+                    if (dayOfWeek >= 0 && dayOfWeek <= 6)
+                    {
+                        int index = dayOfWeek * 9 + (reservationTime.Hour - 9);
+                        if (index >= 0 && index < roomData.WeeklySchedule.Count)
+                        {
+                            string reservationInfo = $"{reservationTime.Hour:00}-{reservationTime.Hour + 1:00} {Random_reservedBy}";
+                            roomData.WeeklySchedule[index] = reservationInfo;
+                            Console.WriteLine($"Reservation added for room {roomId} on {reservationTime}.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Invalid day of week or reservation time.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Invalid day of week.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error: Invalid reservation time.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Room not found.");
+            }
+            SaveRoomsToJson();
+        }
         public void UpdateRoomSchedule(string roomId, int dayOfWeek, DateTime reservationTime)
         {
             var roomData = _roomDataList.FirstOrDefault(r => r.RoomId == roomId);
@@ -198,6 +253,7 @@ namespace ReservationSystem
             {
                 Console.WriteLine("Error: Room not found.");
             }
+            SaveRoomsToJson();
         }
 
         public bool CheckAdminPassword(string password)
@@ -225,6 +281,81 @@ namespace ReservationSystem
             Console.WriteLine("All reservations and schedules have been reset.");
         }
 
+        private string SerializeRoomsDictionary(Dictionary<string, Room> rooms)
+
+        {
+
+            List<RoomData> roomDataList = new List<RoomData>();
+
+            foreach (var room in rooms)
+
+            {
+
+                RoomData roomData = new RoomData
+
+                {
+
+                    RoomId = room.Key,
+
+                    RoomName = room.Value.Name,
+
+                    Capacity = room.Value.Reservations.Count,
+
+                    WeeklySchedule = new List<string>() // Initialize a new list here
+
+                };
+
+
+                for (int row = 9; row < 17; row++)
+
+                {
+
+                    int startHour = row;
+
+                    int endHour = startHour + 1;
+
+
+                    string scheduleEntry = $"{startHour}:00-{endHour}:00";
+
+                    for (int col = 0; col < 7; col++)
+
+                    {
+
+                        DateTime reservationTime = DateTime.Today.AddDays(col).AddHours(startHour);
+
+                        Reservation? reservation = GetReservation(room.Key, col, reservationTime);
+
+
+                        if (reservation != null)
+
+                        {
+
+                            scheduleEntry += $"      {room.Key}-{reservation.ReservedBy}";
+
+                        }
+
+                        else
+
+                        {
+
+                            scheduleEntry += $"       {room.Key}-Open";
+
+                        }
+
+                    }
+
+                    roomData.WeeklySchedule.Add(scheduleEntry);
+
+                }
+
+                roomDataList.Add(roomData);
+
+            }
+
+            return JsonConvert.SerializeObject(new RoomsData { Rooms = roomDataList }, Formatting.Indented);
+
+        }
+
         public void SaveRoomsToJson()
         {
             try
@@ -245,45 +376,82 @@ namespace ReservationSystem
         }
 
         public void DisplayRoomWeeklySchedule(string roomId)
+{
+    if (!_rooms.ContainsKey(roomId))
+    {
+        Console.WriteLine("Error: Room not found.");
+        return;
+    }
+
+    var room = _rooms[roomId];
+    var roomData = new RoomData
+    {
+        RoomId = roomId,
+        RoomName = room.Name,
+        Capacity = room.Reservations.Count,
+        WeeklySchedule = new List<string>() // Initialize a new list here
+    };
+
+    Console.WriteLine($"Weekly schedule for room {roomId}:");
+    Console.WriteLine("|---------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
+    Console.WriteLine("|        Time         |        Sunday        |        Monday        |        Tuesday       |       Wednesday      |       Thursday       |        Friday        |        Saturday      |");
+    Console.WriteLine("|---------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
+
+    for (int row = 9; row < 17; row++)
+    {
+        int startHour = row;
+        int endHour = startHour + 1;
+
+        if (startHour == 9)
         {
-            if (!_rooms.ContainsKey(roomId))
-            {
-                Console.WriteLine("Error: Room not found.");
-                return;
-            }
-
-            var room = _rooms[roomId];
-            var roomData = new RoomData
-            {
-                RoomId = roomId,
-                RoomName = room.Name,
-                Capacity = room.Reservations.Count,
-                WeeklySchedule = new List<string>(new string[63]) // Initialize a new list here
-            };
-
-            Console.WriteLine($"Weekly schedule for room {roomId}:");
-            Console.WriteLine("|----------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
-            Console.WriteLine("|      Time      |        Sunday        |        Monday        |        Tuesday       |       Wednesday      |       Thursday       |        Friday        |        Saturday      |");
-            Console.WriteLine("|----------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
-
-            for (int row = 9; row < 17; row++)
-            {
-                Console.Write($"|     {row:00}-{row + 1:00}      |");
-
-                for (int col = 0; col < 7; col++)
-                {
-                    string reservationInfo = room.Reservations.FirstOrDefault(r => r.ReservationTime.Hour == row && r.ReservationTime.DayOfWeek == (DayOfWeek)col)?.ReservedBy;
-                    reservationInfo = reservationInfo ?? " Available ";
-                    reservationInfo = reservationInfo.PadRight(15);
-                    Console.Write($"      {reservationInfo} |");
-                }
-
-                Console.WriteLine();
-            }
-
-            Console.WriteLine("|----------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
-            _roomDataList.Add(roomData);
+            Console.Write($"|     0{startHour}:00-{endHour}:00     |");
         }
+        else
+        {
+            Console.Write($"|     {startHour}:00-{endHour}:00     |");
+        }
+
+        for (int col = 0; col < 7; col++)
+        {
+            DateTime reservationTime = DateTime.Today.AddDays(col).AddHours(startHour);
+            Reservation? reservation = GetReservation(roomId, col, reservationTime);
+
+            string reservationInfo = reservation != null ? $"{roomId}-{reservation.ReservedBy}" : "  Open  ";
+            Console.Write($"       {reservationInfo.PadRight(15)}|");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine("|---------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|");
+
+    UpdateRoomWeeklySchedule(roomId, roomData);
+    SaveRoomsToJson(); // Call SaveRoomsToJson without any arguments
+}
+private void UpdateRoomWeeklySchedule(string roomId, RoomData roomData)
+{
+    roomData.WeeklySchedule.Clear();
+    for (int row = 9; row < 17; row++)
+    {
+        int startHour = row;
+        int endHour = startHour + 1;
+
+        string scheduleEntry = $"{startHour}:00-{endHour}:00";
+        for (int col = 0; col < 7; col++)
+        {
+            DateTime reservationTime = DateTime.Today.AddDays(col).AddHours(startHour);
+            Reservation? reservation = GetReservation(roomId, col, reservationTime);
+
+            if (reservation != null)
+            {
+                scheduleEntry += $"      {roomId}-{reservation.ReservedBy}";
+            }
+            else
+            {
+                scheduleEntry += $"       {roomId}-Open";
+            }
+        }
+        roomData.WeeklySchedule.Add(scheduleEntry);
+    }
+}
 
         public void SaveReservationsToJson()
         {
@@ -468,12 +636,14 @@ namespace ReservationSystem
                         Console.Write("Enter Admin Password: ");
                         string adminPassword = Console.ReadLine();
                         reservationHandler.StartAutomaticReservation(adminPassword);
+                        reservationHandler.LogUserInteraction("Admin started automatic reservation.","Admin");
                         break;
 
                     case "6":
                         Console.Write("Enter Admin Password: ");
                         adminPassword = Console.ReadLine();
                         reservationHandler.ResetAllReservationsAndSchedules(adminPassword);
+                        reservationHandler.LogUserInteraction("Admin deleted all the reservations.","Admin");
                         break;
 
                     case "7":
@@ -488,4 +658,3 @@ namespace ReservationSystem
         }
     }
 }
-*/
