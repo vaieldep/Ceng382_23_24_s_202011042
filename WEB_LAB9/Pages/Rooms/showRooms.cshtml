@@ -1,0 +1,28 @@
+@page
+@model WEB_LAB9.Pages.Rooms.ShowRoomsModel
+
+@{
+    ViewData["Title"] = "Rooms List";
+}
+
+<h2>Rooms List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model.Rooms)
+        {
+            <tr>
+                <td>@room.Id</td>
+                <td>@room.RoomName</td>
+                <td>@room.Capacity</td>
+            </tr>
+        }
+    </tbody>
+</table>
