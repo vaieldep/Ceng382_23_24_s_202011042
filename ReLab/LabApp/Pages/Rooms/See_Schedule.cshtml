@@ -1,0 +1,43 @@
+@page
+@model LabApp.Pages.Rooms.SeeScheduleModel
+@{
+    ViewData["Title"] = "Weekly Schedule";
+}
+
+<div style="margin: 20px; background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Hour</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var hour = 9; hour <= 17; hour++)
+        {   
+            <tr>
+                <td>@hour:00</td>
+                @for (var day = 1; day <= 5; day++)
+                {
+                    <td>
+                        @{
+                            var reservations = Model.Reservations
+                                .Where(r => r.Date % 7 == day && r.Time == hour)
+                                .ToList();
+                        }
+
+                        @foreach (var reservation in reservations)
+                        {
+                            <div>@Model.Rooms.FirstOrDefault(r => r.Id == reservation.RoomId)?.RoomName - @reservation.UserId</div>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,9 @@
+Kullanıcı reservation oluşturdu.Kullanıcı reservation oluşturdu.Kullanıcı reservation oluşturdu.
+0'li kullanıcı reservation sildi.
+0'li kullanıcı reservation oluşturdu.
+C-101 isimli oda oluşturdu.
+C-102 isimli oda oluşturdu.
+ isimli oda silindi.
+C-102 isimli oda oluşturdu.
+ isimli oda silindi.
+0'li kullanıcı reservation oluşturdu.
