@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "On2I8sOBoyC+4r7gleDjvkAjZVCOptUI/fxWZtrtmPAlkeEKFzs9djtzRDr95+j41x+DcSStq6kbU+sWB2iylg==",
+  "dgSpecHash": "645draJWi+I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\deniz\\Desktop\\Ceng382\\Ceng382_23_24_s_202011042\\Ceng382_23_24_s_202011042.csproj",
+  "projectFilePath": "C:\\Users\\user\\OneDrive\\Masaüstü\\382\\Ceng382_23_24_s_202011042\\Ceng382_23_24_s_202011042.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\deniz\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
